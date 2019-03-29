@@ -18,3 +18,16 @@
         margin-bottom: 40px;
     }
 }
+
+@media (max-width: 767px){
+    .screen-testimonials h3{
+        font-size: 36px;
+    }
+}
+
+@media(max-width:560px){
+    .testimonials-carousel .owl-nav .owl-next
+    , .testimonials-carousel .owl-nav .owl-prev{
+        display: none;
+    }
+}

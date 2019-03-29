@@ -51,7 +51,10 @@
     function priceFormSteps(){
        
     }
-
+    var formSendHandler = function (Request){
+        var response = Request.responseText;
+        console.log("success");           
+    };
 
     $(document).ready(function() {
 
@@ -62,20 +65,16 @@
             event.preventDefault(); // отменяем событие по умолчанию
             
             
-            var jsonData = JSON.stringify(getFormValues($(this)));
-            console.log(jsonData);
-            
            
-            //SendRequest("POST", "mailer.php", 'data='+jsonData, popupPriceHandler);
             
             var purpose = $(this).attr("data-purpose");
             if(purpose == "price-list"){
             } else{
             }
             
-            //fbq("track", "Lead");
-            // dataLayer.push({"event":"send_form"}); 
-            $(this).find("input").val("");
+            fbq("track", "Lead");
+            dataLayer.push({"event":"send_form"}); 
+            //$(this).find("input").val("");
         });
         
         $(".testimonials-carousel").owlCarousel({
@@ -203,6 +202,8 @@
         $('.popup').css({opacity:'0', 'pointer-events': 'none'});
     })
 
+
+
     $('.header__mob_menu li').on('click',function(){
         i++;
         $('.header__mob_menu').css({transform:'translateX(-252px)'});
@@ -212,7 +213,7 @@
     })
 
    
-    $('.send').on('click',function(){
+    $('.send').on('submit',function(){
         var name = $('.name').val().length;
         var phone = $('.phone').val().length;
         var mail = $('.mail').val().length;
@@ -227,16 +228,33 @@
 
         if(name >= 2 ){
             FlegName = 1;
+        }else{
+            $('.name').css({border:'3px solid red'});
+                  setTimeout(function(){
+                  $('.name').css({border:'none'});
+            },1000);
         }
         if(phone == 19 ){
             Flegphone = 1;
+       }else{
+            $('.phone').css({border:'3px solid red'});
+                setTimeout(function(){
+                $('.phone').css({border:'none'});
+           },1000);
        }
        if(mail >= 5 ){
             Flegmail = 1;
+       }else{
+          $('.mail').css({border:'3px solid red'});
+             setTimeout(function(){
+             $('.mail').css({border:'none'});
+          },1000);
        }
 
        if(FlegName == 1 && Flegphone==1 && Flegmail==1){
-       
+        var jsonData = JSON.stringify(getFormValues($(this)));
+            console.log(jsonData);
+            SendRequest("POST", "mailer.php", 'data='+jsonData, formSendHandler);
         $('.name, .phone, .mail, .send').css({opacity:'0',transition:'1s'});
        
         setTimeout(function(){
@@ -267,10 +285,82 @@
         // console.log();
 
     })
+
     
     // попап
 
+     
 
+    // попап2
+
+    $('.send2').on('submit',function(){
+
+        var FlegName = 0;
+        var Flegphone = 0;
+        var Flegmail = 0;
+
+        $('.name2').each(function(key,elem){
+            var name = $(elem).val().length;
+            if(name >= 2 ){
+                FlegName = 1;                  
+                console.log(FlegName);       
+                return ;              
+            }else{
+                $(this).css({border:'3px solid red'});
+                setTimeout(function(){
+                    $('.name2').css({border:'none'});
+                },1000);              
+            }  
+             
+        });
+
+        $('.phone2').each(function(key,elem){
+            var phone = $(elem).val().length;           
+            if(phone == 19){
+                Flegphone = 1;                  
+                console.log(Flegphone);       
+                return ;   
+            }else{
+                $(this).css({border:'3px solid red'});
+                setTimeout(function(){
+                    $('.phone2').css({border:'none'});
+                },1000);
+            }  
+            
+        });
+
+        $('.mail2').each(function(key,elem){
+            var mail = $(elem).val().length;       
+            if(mail >= 5){
+                Flegmail = 1;                
+                console.log(Flegmail);          
+                return ;              
+            }else{
+                $(this).css({border:'3px solid red'});
+                setTimeout(function(){
+                    $('.mail2').css({border:'none'});
+                },1000);
+            }  
+             
+        });
+
+       if(FlegName == 1 && Flegphone==1 && Flegmail==1){  
+        var jsonData = JSON.stringify(getFormValues($(this)));
+        console.log(jsonData);
+        SendRequest("POST", "mailer.php", 'data='+jsonData, formSendHandler);
+        $('.popup_goodbye').css({opacity:'1','pointer-events':'auto'});
+        setTimeout(function(){
+            $('.popup_goodbye').css({opacity:'0','pointer-events':'none'});
+            $('.name2, .phone2, .mail2').val('');
+                   
+        },4000);        
+       }
+
+    })
+
+
+
+    // попап2
 
 
     // swipe

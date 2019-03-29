@@ -81,6 +81,13 @@
         line-height: 1;
         margin-bottom: 10px
     }
+
+    .screen-advantages .screen2__Bottom .col{
+
+        &:last-child{
+            margin-bottom: 0px;
+        }
+    }
 }
 @media(max-width:560px){
     .screen2 .container h3{

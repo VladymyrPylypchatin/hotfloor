@@ -97,6 +97,10 @@
     .screen3{
         padding-bottom:40px;
     }
+    .screen3 form .screen3__blockInput button{
+        width: 49%;
+        margin: 0;
+    }
 }
 @media(max-width:767px){
     .screen3 h3{
@@ -115,6 +119,11 @@
     .screen3 form .screen3__blockInput input{
         width: 100%;
     }
+
+    .screen3 form .screen3__blockInput button{
+        width: 100%;
+    }
+    
 }
 @media(max-width:560px){
     

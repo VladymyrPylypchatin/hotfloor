@@ -142,7 +142,7 @@
         width: 100%;
     }
     .screen5 .screen5__wrapCol .rightCol form .topIput label{
-        font-size: 14px;
+        margin-right: 0px;
     }
     .screen5 .screen5__wrapCol .rightCol form .bottomRadio label{
         font-size: 12px;
@@ -192,5 +192,12 @@
     .screen5 .screen5__wrapCol .rightCol form{
         padding: 15px;
         width: 100%;
+    }
+    .screen5 .screen5__wrapCol .rightCol form .topIput input{
+        width:100%;
+    }
+    .screen5 .screen5__wrapCol .rightCol form .topIput label{
+        width:100%;
+        text-align:left;
     }
 }
