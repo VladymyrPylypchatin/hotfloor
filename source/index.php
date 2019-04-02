@@ -21,13 +21,16 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WLJ5PPV');</script>
-    <!-- End Google Tag Manager -->
+    <!-- End Google Tag Manager-->
 </head>
 
 <body>
+
     <!-- Google Tag Manager (noscript) -->
+
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLJ5PPV"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+     
     <!-- End Google Tag Manager (noscript) -->
     
     <header>
@@ -121,20 +124,20 @@
                         <li>Доставка в любую точку Украины</li>
                         <li>Отправка в течении 24 часов</li>
                     </ul>
-                    <button class="button_orange sizeButton open_popup" data-text="Получи консультацию от эксперта">Получи консультацию от эксперта</button>
+                    <button class="button_orange sizeButton open_popup" data-text="Получить консультацию от эксперта">Получить консультацию от эксперта</button>
                 </div>
                 <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12 col-12 screen1__RightBar">
                     <form action="/" class="lead-form send2">
                         <h2>Бесплатный Монтаж теплого пола в Харькове</h2>
                         <h3>Закажи на сумму больше 5000 грн. и получи бесплатный монтаж пола</h3>
-                        <input class="name2" type="text" name="name" placeholder="Ваше имя" required>
-                        <input class="phone2" type="tel" name="phone" placeholder="+(380)__ - ___ - __ - __" required>
-                        <input class="mail2" type="email" name="email" placeholder="Ваш E-mail" required>
+                        <input class="name2" type="text" name="name" placeholder="Ваше имя" >
+                        <input class="phone2" type="tel" name="phone" required placeholder="+(380)__ - ___ - __ - __" >
+                        <input class="mail2" type="email" name="email"required  placeholder="Ваш E-mail" >
                         <button class="button_orange size " type="submit">Отправить</button>
                     </form>
                 </div>
             </div>
-        </div>
+        </div>   
     </div>
 
     <div class="screen2">
@@ -253,9 +256,9 @@
                     Оставьте заявку, чтобы получить подробности акции
                 </h3>
                 <div class="screen3__blockInput">
-                    <input class="name2" type="text" name="name" placeholder="Ваше имя" required>
-                    <input class="phone2" type="tel" name="phone" placeholder="+(380)__ - ___ - __ - __" required>
-                    <input class="mail2" type="email" name="email" placeholder="Ваш E-mail" required>
+                    <input class="name2" type="text" name="name" placeholder="Ваше имя" >
+                    <input class="phone2" type="tel" name="phone" required placeholder="+(380)__ - ___ - __ - __">
+                    <input class="mail2" type="email" name="email" required placeholder="Ваш E-mail">
                     <button class="button_orange size " type="submit">Отправить</button>
                 </div>
             </form>
@@ -409,10 +412,10 @@
         <form action="/" class="lead-form send">
             <div class="PopupClosed"></div>
             <p class="popup__titleForm"></p>
-            <input class="name" type="text" name="name" placeholder="Ваше имя" required>
-            <input class="phone" type="tel" name="phone" placeholder="+(380)__ - ___ - __ - __" required>
-            <input class="mail" type="email" name="email" placeholder="Ваш E-mail" required>
-            <button class="button_orange " type="submit">Отправить</button>
+            <input class="name" type="text" name="name" placeholder="Ваше имя" >
+            <input class="phone" type="tel" name="phone" required placeholder="+(380)__ - ___ - __ - __" >
+            <input class="mail" type="email" name="email" required placeholder="Ваш E-mail" >
+            <button class="button_orange popupBat" type="submit">Отправить</button>
         </form>
     </div>
 

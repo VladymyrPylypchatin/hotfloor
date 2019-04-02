@@ -64,13 +64,12 @@
         $('.lead-form').on('submit', function(event) {
             event.preventDefault(); // отменяем событие по умолчанию
             
-            
-           
-            
             var purpose = $(this).attr("data-purpose");
             if(purpose == "price-list"){
             } else{
             }
+            
+
             
             fbq("track", "Lead");
             dataLayer.push({"event":"send_form"}); 
@@ -200,6 +199,10 @@
 
     $('.PopupClosed').on('click',function(){
         $('.popup').css({opacity:'0', 'pointer-events': 'none'});
+        setTimeout(function(){
+            $('.name, .phone, .mail').val('');
+        },1050);
+       
     })
 
 
@@ -222,15 +225,15 @@
         console.log(phone);
         console.log(mail);
 
-        var FlegName = 0;
-        var Flegphone = 0;
-        var Flegmail = 0;
+        var FlegName = 1;
+        var Flegphone = 1;
+        var Flegmail = 1;
 
         if(name >= 2 ){
             FlegName = 1;
         }else{
             $('.name').css({border:'3px solid red'});
-                  setTimeout(function(){
+             setTimeout(function(){
                   $('.name').css({border:'none'});
             },1000);
         }
@@ -238,7 +241,7 @@
             Flegphone = 1;
        }else{
             $('.phone').css({border:'3px solid red'});
-                setTimeout(function(){
+            setTimeout(function(){
                 $('.phone').css({border:'none'});
            },1000);
        }
@@ -246,8 +249,8 @@
             Flegmail = 1;
        }else{
           $('.mail').css({border:'3px solid red'});
-             setTimeout(function(){
-             $('.mail').css({border:'none'});
+          setTimeout(function(){
+             $('.mail').css({border:'none'}); 
           },1000);
        }
 
@@ -255,25 +258,22 @@
         var jsonData = JSON.stringify(getFormValues($(this)));
             console.log(jsonData);
             SendRequest("POST", "mailer.php", 'data='+jsonData, formSendHandler);
-        $('.name, .phone, .mail, .send').css({opacity:'0',transition:'1s'});
-       
-        setTimeout(function(){
-          $('.name, .phone, .mail, .send, .PopupClosed').css({ display:'none'});
-          $('.popup__titleForm').text('Спасибо, мы Вам позвоним в ближайшее время.')
-         },1000);
 
+
+            $('.name, .phone, .mail').css({opacity:'0',transition:'1s'});
+        setTimeout(function(){      
+            $('.name, .phone, .PopupClosed, .popupBat, .mail').css({ display:'none'});
+            $('.popup__titleForm').text('Спасибо, мы Вам позвоним в ближайшее время.');
+         },1000);
          setTimeout(function(){
             $('.popup').css({opacity:'0', 'pointer-events': 'none'});
             setTimeout(function(){
                 $('.name, .phone, .mail, .send').css({ display:'block',opacity:'1'});
-                $('.PopupClosed').css({ display:'flex',opacity:'1'});
+                $('.PopupClosed, .popupBat').css({ display:'flex',opacity:'1'});
                 $('.name, .phone, .mail').val('');
-            },1000)
-            
+            },1000)   
          },5000);
-        
-        
-       }
+     };
 
 
         
@@ -295,9 +295,11 @@
 
     $('.send2').on('submit',function(){
 
-        var FlegName = 0;
-        var Flegphone = 0;
-        var Flegmail = 0;
+        console.log('da');
+
+        var FlegName = 1;
+        var Flegphone = 1;
+        var Flegmail = 1;
 
         $('.name2').each(function(key,elem){
             var name = $(elem).val().length;
@@ -345,17 +347,17 @@
         });
 
        if(FlegName == 1 && Flegphone==1 && Flegmail==1){  
+
         var jsonData = JSON.stringify(getFormValues($(this)));
         console.log(jsonData);
         SendRequest("POST", "mailer.php", 'data='+jsonData, formSendHandler);
+
         $('.popup_goodbye').css({opacity:'1','pointer-events':'auto'});
         setTimeout(function(){
             $('.popup_goodbye').css({opacity:'0','pointer-events':'none'});
-            $('.name2, .phone2, .mail2').val('');
-                   
+            $('.name2, .phone2, .mail2').val('');               
         },4000);        
        }
-
     })
 
 
