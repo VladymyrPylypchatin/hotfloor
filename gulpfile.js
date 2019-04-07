@@ -52,10 +52,12 @@ gulp.task("build-css", function () {
 
 gulp.task('concat-scripts', function(){
     return gulp.src([
+        'source/assets/js/parts/ajax.js', 
+        'source/assets/js/jquery.main.js', 
         'source/assets/js/parts/product.js',
+        'source/assets/js/parts/productPopup.js',
         'source/assets/js/parts/productList.js',
         'source/assets/js/main.js',
-        'source/assets/js/jquery.main.js', 
     ])
     .pipe(babel({
         presets: ['@babel/env']

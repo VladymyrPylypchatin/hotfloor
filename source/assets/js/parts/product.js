@@ -21,7 +21,8 @@ let types = {
     hotmat: {
         id: 1, 
         name: "Нагревательный мат", 
-        categoryTittle: "Нагревательные маты под плитку",
+        categoryTittle: "Нагревательный мат под плитку",
+        montageType: "В слой плиточного клея",
         description: "Нагревательные маты монтируются на чистую стяжку, сверху плиточный клей и плитка. Используются при отсутствии возможности поднимать высоту пола.", 
         powerUnit: "Вт/м<sup>2</sup>", 
         priceUnit: "грн/м<sup>2</sup>"
@@ -29,6 +30,7 @@ let types = {
     hotcabel: {
         id: 2, 
         name: "Нагревательный кабель",
+        montageType: "В стяжку",
         description: "Нагревательны кабель используется если есть возможность поднять высоту пола на 3 - 7 см цементно-песчаной стяжкой. Сверху выложить кабель и залить стяжкой 3-5 см, уложить плитку на плиточный клей.",  
         categoryTittle: "Нагревательный кабель в стяжку",
         powerUnit: "Вт/м", 
@@ -37,6 +39,7 @@ let types = {
     thincabel: {
         id: 3, 
         name: "Тонкий кабель",
+        montageType: "В слой плиточного клея",
         description: "Тонкий нагревательный кабель под плитку монтируются на чистовую стяжку, сверху плиточный клей и укладывается плитка. Используются если нет возможности или желания поднимать высоту пола.",   
         categoryTittle: "Тонкий нгревательный кабель под плитку",
         powerUnit: "Вт/м", 
@@ -45,6 +48,7 @@ let types = {
     plenka: {
         id: 4, 
         name: "Инфракрасная пленка",
+        montageType: "Под легкие покрытия",
         description: "Инфракрасная пленка монтируется под сухие напольные покрытия, такие как: ламинат, линолеум, паркет. Экономичный и эффективный вид отопления помещения. Главные преимущества: быстрый монтаж и низкая цена.",    
         categoryTittle: "Инфракрасная пленка под ламинат",
         powerUnit: "Вт", 
@@ -53,12 +57,17 @@ let types = {
  };
 
 class Product{
-    constructor(id, brand, type, price, power, name = brand.name) {
+    constructor(id, brand, type, price, power, cabelDiametr, heatingArea, waranty, description, cabelType, name = brand.name) {
         this.id = id;
         this.brand = brand;
         this.type = type;
         this.price = price;
         this.power = power;
+        this.cabelDiametr = cabelDiametr;
+        this.heatingArea = heatingArea;
+        this.waranty = waranty; 
+        this.description = description;
+        this.cabelType = cabelType;
         this.name = name;
         this.card = null;
     }
@@ -86,11 +95,18 @@ class Product{
 
         return this.card;
     }
-
+   
     openPopup(){
-        $('.popup').css({opacity:'1', 'pointer-events': 'auto'});
-        var DataText =  this.type.name + " " + this.brand.name + ". Получить консультацию";
-        $('.popup__titleForm').text(DataText);
+        let popup = new ProductPopup(this);
+        setTimeout(function(){
+            popup.open();
+        }, 200);
+        // popup.open();
+
+
+        // $('.popup').css({opacity:'1', 'pointer-events': 'auto'});
+        // var DataText =  this.type.name + " " + this.brand.name + ". Получить консультацию";
+        // $('.popup__titleForm').text(DataText);
     }
 
     analyticsEvent(){
