@@ -101,11 +101,29 @@
     }
 }
 @media(max-width:767px){
-    
+    .topSales .container h2{
+        font-size: 32px;
+    }
 }
 @media(max-width:560px){
     .topSales .container .top .left button{
         width:100%;
        
+    }
+}
+
+@media(max-width:480px){
+    .topSales .container .row__items .itemWrap{
+        padding: 5px;
+    }
+    
+    .topSales .container .row__items .itemWrap{
+        margin-bottom:0px;
+    }
+    .item .discription .itemTitle{
+        font-size:18px;
+    }
+    .btn-showmore{
+        margin-top:30px;
     }
 }

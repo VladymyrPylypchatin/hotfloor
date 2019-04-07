@@ -31,7 +31,7 @@ class ProductList{
             
             new Product(19, brands.plenka, types.plenka, 350, 220, "Heat Plus"),
         ];
-        this.sort = null;
+        this.sort = types.none;
         this.sortedList = this.list;
 
         //Dispaly data
@@ -47,11 +47,9 @@ class ProductList{
         this.showMoreButton.bind("click", this.showMore.bind(this));
 
         //Sorting buttons
+        
         this.sortsButtons = $(".topSales .sort-buttons button");
-        this.sortsButtons.bind("click", this.sortProducts.bind(this));
-        this.sortsButtons.bind("click", this.activateButton.bind(this));
-        this.sortsButtons.bind("click", this.refreshTitle.bind(this));
-        this.sortsButtons.bind("click", this.refreshDescription.bind(this));
+        this.sortsButtons.bind("click", this.changeCat.bind(this));
         this.sortsButtons.bind("click", function(){
             dataLayer.push({"event":"changeCategory"});      
         });
@@ -59,18 +57,39 @@ class ProductList{
         //Info blocks
         this.sectionTitle = $(".topSales h2");
         this.typeDescription = $(".topSales .sort-description");
+
+
+        this.setActiveCat();
     }
     
-    //Sort
-    sortProducts(event){
+    //change category
+
+    changeCat(event){
         let sortType = event.target.getAttribute("data-sort-type");
+        this.sortProducts(sortType);
+        this.activateButton(event.target);
+        this.refreshTitle();
+        this.refreshDescription();
+    }
+    setActiveCat(){
+        let button = document.querySelector(".topSales .sort-buttons button.active");
+        if(button){
+            let sortType = button.getAttribute("data-sort-type");
+            this.sortProducts(sortType);
+            this.refreshTitle();
+            this.refreshDescription();
+        }
+    }
+    //Sort
+    sortProducts(sortType){
+        //let sortType = 
 
         console.log(sortType);
         console.log(this.sort);
 
         if(types[sortType] == this.sort){
             this.sortedList = this.list;
-            this.sort = null;
+            this.sort = types.none;
         } else {
             this.sort = types[sortType];
             this.sortedList = [];
@@ -90,9 +109,8 @@ class ProductList{
     } 
 
     //SortButtons active
-    activateButton(event){
-        let button = event.target;
-                
+    activateButton(button){    
+        console.dir(button);            
         if(button.classList.contains("active")){
             button.classList.remove("active");
         } else {

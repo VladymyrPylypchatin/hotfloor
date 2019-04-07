@@ -17,8 +17,8 @@
     <link rel="stylesheet" href="assets/css/main.css">
     
     <title>
-    
-        Теплый электрический пол от официального дилера 
+        <?php echo $hypersegment->getRelevantText("productType", "title", "Теплый электрический пол") ?> 
+         от официального дилера 
         <?php echo $hypersegment->getRelevantText("region", "title", "") ?> 
         с 20-ти летним опытом!
     </title>
@@ -113,20 +113,10 @@
             <div class="row">
                 <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12 col-12 screen1__leftBar">
                     <h1>
-                        <?php
-                            $region = isset($_REQUEST['region']) && !empty($_REQUEST['region']) ? $_REQUEST['region'] : NULL;
-                            if($region == "kharkov") {
-                        ?>
-                            Теплый электрический пол
-                            <span>от официального дилера в Харькове</span> с <span> 20-ти летним</span> опытом!
-                        <?php
-                            } else {
-                        ?>
-                            Теплый электрический пол
-                            <span>от официального дилера</span> с <span> 20-ти летним</span> опытом!
-                        <?php
-                            }
-                        ?>
+                        <?php echo $hypersegment->getRelevantText("productType", "header", "Теплый электрический пол") ?> 
+                        <span>от официального дилера
+                        <?php echo $hypersegment->getRelevantText("region", "header", "") ?> 
+                        </span> с <span> 20-ти летним</span> опытом!
                     </h1>
                     <ul>
                         <li>Гарантия 25 лет от производителя</li>
@@ -195,10 +185,10 @@
                 <div class="palcka"></div>
             <div class="row top">
                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 left sort-buttons">
-                      <button data-sort-type="hotmat">Нагревательные маты</button>
-                      <button data-sort-type="hotcabel">Нагревательный кабель</button>
-                      <button data-sort-type="thincabel">Тонкий кабель</button>
-                      <button data-sort-type="plenka">Инфракрасная пленка</button>
+                      <button data-sort-type="hotmat" class="<?php echo $hypersegment->setActiveCategory("hotmat")?>">Нагревательные маты</button>
+                      <button data-sort-type="hotcabel" class="<?php echo $hypersegment->setActiveCategory("hotcabel")?>">Нагревательный кабель</button>
+                      <button data-sort-type="thincabel" class="<?php echo $hypersegment->setActiveCategory("thincabel")?>">Тонкий кабель</button>
+                      <button data-sort-type="plenka" class="<?php echo $hypersegment->setActiveCategory("plenka")?>">Инфракрасная пленка</button>
                </div>         
                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 right">
                    <p class="sort-description">

@@ -6,6 +6,7 @@
     justify-content: space-between;
     box-shadow: 0px 4px 14.4px 1.6px rgba(0, 0, 0, 0.14);
     border-radius: 5px;
+   // border:1px solid red;
 
 
     .wrapImg{
@@ -78,12 +79,14 @@
 @media(max-width:1199px){
     .item{
         height: 385px;
+        padding: 10px;
     }
 }
 
 @media (max-width: 991px){
     .item {
         height: 542px;
+        padding: 15px;
     }
 }
 @media (max-width: 767px){
@@ -94,5 +97,30 @@
 @media (max-width: 560px){
     .item {
         height: auto;
+    }
+    .item .wrapImg {
+        height: 35vw;
+    }
+    .item .discription .discr{
+        font-size: 12px;
+    }
+    .item .discription .cena{
+        font-size: 18px;
+    }
+    .item .discription .cena span{
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px){
+    .item{
+        padding:5px;
+    }
+    .item .discription button{
+        height: 35px;
+        font-size: 12px;
+    }
+    .item .discription .cena span{
+        font-size: 16px;
     }
 }

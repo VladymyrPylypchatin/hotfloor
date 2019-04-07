@@ -5202,11 +5202,13 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 1199px) {
   .item {
-    height: 385px; } }
+    height: 385px;
+    padding: 10px; } }
 
 @media (max-width: 991px) {
   .item {
-    height: 542px; } }
+    height: 542px;
+    padding: 15px; } }
 
 @media (max-width: 767px) {
   .item {
@@ -5214,7 +5216,24 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 560px) {
   .item {
-    height: auto; } }
+    height: auto; }
+  .item .wrapImg {
+    height: 35vw; }
+  .item .discription .discr {
+    font-size: 12px; }
+  .item .discription .cena {
+    font-size: 18px; }
+  .item .discription .cena span {
+    font-size: 24px; } }
+
+@media (max-width: 480px) {
+  .item {
+    padding: 5px; }
+  .item .discription button {
+    height: 35px;
+    font-size: 12px; }
+  .item .discription .cena span {
+    font-size: 16px; } }
 
 body {
   font-family: 'Roboto' !important; }
@@ -6173,6 +6192,20 @@ footer {
   .topSales .container .top .right p {
     border: none; } }
 
+@media (max-width: 767px) {
+  .topSales .container h2 {
+    font-size: 32px; } }
+
 @media (max-width: 560px) {
   .topSales .container .top .left button {
     width: 100%; } }
+
+@media (max-width: 480px) {
+  .topSales .container .row__items .itemWrap {
+    padding: 5px; }
+  .topSales .container .row__items .itemWrap {
+    margin-bottom: 0px; }
+  .item .discription .itemTitle {
+    font-size: 18px; }
+  .btn-showmore {
+    margin-top: 30px; } }
