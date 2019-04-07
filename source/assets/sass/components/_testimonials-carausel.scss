@@ -2,15 +2,21 @@
         border-radius: 30px;
         background-color: rgb(255, 255, 255);
         box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.16);
-        padding: 15px 55px 15px 55px;
+        padding: 35px 55px 35px 55px;
              
       
     .owl-stage-outer{
         overflow: hidden;
-        
+        margin-bottom: 30px; 
         
         .owl-stage{
             display: flex;
+
+            .owl-item{
+                display: flex;
+                align-items: center;
+                text-align: center;
+            }
         
         }
     }

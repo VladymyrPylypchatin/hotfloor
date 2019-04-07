@@ -2,7 +2,7 @@
   
     // -------------------------------------------
     $data = json_decode($_POST["data"]);
-    if (!empty($data->email) && !empty($data->phone)) {
+    if (!empty($data->email) || !empty($data->phone)) {
 
         $name = (!empty($data->name) && isset($data->name)) ? $data->name : "No name";
         $email = (!empty($data->email) && isset($data->email)) ? $data->email : "No email";

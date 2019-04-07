@@ -1,3 +1,8 @@
+<?php include "hypersegment.php" ?>
+<?php 
+    $hypersegment = new HyperSegment();   
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -11,9 +16,14 @@
     <link rel="stylesheet" href="assets/css/libs.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     
-    <title>Теплый электрический пол от официального представителя с 20-ти летним опытом!</title>
+    <title>
+    
+        Теплый электрический пол от официального дилера 
+        <?php echo $hypersegment->getRelevantText("region", "title", "") ?> 
+        с 20-ти летним опытом!
+    </title>
     <meta name="description" content="Магазин электрических теплых полов с 20-ти летним опытом работы. Монтаж теплых полов. Гарантия до 25 лет." />
-
+ 
     
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -108,12 +118,12 @@
                             if($region == "kharkov") {
                         ?>
                             Теплый электрический пол
-                            <span>от официального представителя в Харькове</span> с <span> 20-ти летним</span> опытом!
+                            <span>от официального дилера в Харькове</span> с <span> 20-ти летним</span> опытом!
                         <?php
                             } else {
                         ?>
                             Теплый электрический пол
-                            <span>от официального представителя</span> с <span> 20-ти летним</span> опытом!
+                            <span>от официального дилера</span> с <span> 20-ти летним</span> опытом!
                         <?php
                             }
                         ?>
@@ -127,9 +137,9 @@
                     <button class="button_orange sizeButton open_popup" data-text="Получить консультацию от эксперта">Получить консультацию от эксперта</button>
                 </div>
                 <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12 col-12 screen1__RightBar">
-                    <form action="/" class="lead-form send2">
-                        <h2>Бесплатный Монтаж теплого пола в Харькове</h2>
-                        <h3>Закажи на сумму больше 5000 грн. и получи бесплатный монтаж пола</h3>
+                    <form action="/" class="lead-form send2" data-form-name="specialoffer">
+                        <h2>Бесплатная доставка по всей Украине</h2>
+                        <h3>Закажи больше 3 кв.м теплого пола и получи бесплатную доставку</h3>
                         <input class="name2" type="text" name="name" placeholder="Ваше имя" >
                         <input class="phone2" type="tel" name="phone" required placeholder="+(380)__ - ___ - __ - __" >
                         <input class="mail2" type="email" name="email"required  placeholder="Ваш E-mail" >
@@ -179,6 +189,33 @@
         </div>
     </div>
 
+    <div class="topSales">
+        <div class="container">
+                <h2>Теплые электрические полы всех видов</h2>
+                <div class="palcka"></div>
+            <div class="row top">
+               <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 left sort-buttons">
+                      <button data-sort-type="hotmat">Нагревательные маты</button>
+                      <button data-sort-type="hotcabel">Нагревательный кабель</button>
+                      <button data-sort-type="thincabel">Тонкий кабель</button>
+                      <button data-sort-type="plenka">Инфракрасная пленка</button>
+               </div>         
+               <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 right">
+                   <p class="sort-description">
+                   Существует 4 основных вида теплого электрического пола. Они отличаются способом и сложностью монтажа, типом напольного покрытия под который они предназначены, ценой и энергоэффективностью. Используйте фильтр, чтобы выбрать конкретный вид теплого пола.
+                   </p>
+               </div>         
+            </div>
+            <div class="row row__items">
+     
+               
+            </div>
+            <div class="button_orange btn-showmore" data-action="more">
+                Показать больше
+            </div>
+        </div>
+    </div>
+
     <div class="screen-advantages">
         <div class="container">
             <h3 class="pochemu">Почему клиенты выбирают нас</h3>
@@ -218,7 +255,7 @@
                     <div class="text">
                         <h4>Гарантия до 25 лет от Производителя</h4>
                         <p>
-                            Производители предоставляют гарантию до 25 лет. Но если прислушаться советам наших специалистов он прослужит вам ещё дольше.
+                            Мы реализуем только оригинальную продукцию поэтому, Производители предоставляют полную гарантию до 25 лет. 
                         </p>
                     </div>
                 </div>
@@ -251,7 +288,7 @@
             <p>Оставьте заявку на сайте и получайте <span>консультацию от специалиста </span> и <span>гарантированную скидку 10%</span> на все товары!
             </p>
             <div class="screen3__line"></div>
-            <form action="/" class="lead-form send2">
+            <form action="/" class="lead-form send2" data-form-name="discount">
                 <h3>
                     Оставьте заявку, чтобы получить подробности акции
                 </h3>
@@ -321,27 +358,71 @@
                         <span> избежать переплат и дальнейших проблем.</span> </p>
                 </div>
                 <div class="rightCol">
-                    <form action="/" class="lead-form">
-                        <p>ЗАПОЛНИТЕ ФОРМУ</p>
+                    <form action="/" class="lead-form send2" data-form-name="calculator">
+                    <p>Калькулятор теплого пола</p>
                         <div class="topIput">
-                            <label for="type">Тип напольного покрытия</label>
-                            <input type="text" id="type" placeholder="Например - плитка">
+                            <label for="type">Тип помещения</label>
+                            <select class="select" required name="type" id="type">
+                                <option value="">Выберите тип помещения</option>
+                                <option value="">Балкон, лоджия</option>
+                                <option value="">Бассейн</option>
+                                <option value="">Ванная комната, санузел</option>
+                                <option value="">Гараж</option>
+                                <option value="">Гостинная</option>
+                                <option value="">Прихожая</option>
+                                <option value="">Кухня</option>
+                                <option value="">Комната</option>
+                                <option value="">Подсобное помещение</option>
+                            </select>
+
+                            <label for="heating">Тип обогрева</label>
+                            <select class="select" required name="heating" id="heating">
+                                <option value="">Выберите тип обогрева</option>
+                                <option value="">Инфракрасная пленка</option>
+                                <option value="">Стержневой теплый пол</option>
+                                <option value="">Нагревательный кабель</option>
+                                <option value="">Нагревательный мат</option>
+                            </select>
+
+                            <label for="montage">Тип монтажа</label>
+                            <select class="select" required name="montage" id="montage">
+                                <option value="">Выберите тип монтажа</option>
+                                <option value="">С нашей помощью</option>
+                                <option value="">Своими руками</option>
+                            </select>
+
+                            <label for="cover">Тип напольного покрытия</label>
+                            <select class="select" required name="cover" id="cover">
+                                <option value="">Выберите тип покрытия</option>
+                                <option value="">Доска</option>
+                                <option value="">Ковролин</option>
+                                <option value="">Ламинат</option>
+                                <option value="">Линолеум</option>
+                                <option value="">Паркет</option>
+                                <option value="">Плитка</option>
+                                <option value="">Другое</option>
+                            </select>
+
+                            <label for="s">Площадь обогрева, м<sup>2</sup></label>
+                            <input name="s" type="text" id="s">
+
+                            <label for="Thermostat">Терморегулятор</label>
+                            <select class="select" required name="Thermostat" id="Thermostat">
+                                <option value="">Выберите терморегулятор</option>
+                                <option value="">Механический</option>
+                                <option value="">Программируемый</option>
+                                <option value="">Не надо</option>
+                            </select>
+
+                            <label for="tel" >Телефон для обратной связи</label>
+                            <input type="tel" required name="phone" id="tel" placeholder="+38( ___ ) ___ - __ - __">
+
+                            <label name="textarea" for="textarea">Комментарий</label>
+                            <textarea  id="textarea"></textarea>
+
                         </div>
-                        <div class="topIput">
-                            <label for="S">Площадь обогрева м <sup><small>2</small></sup></label>
-                            <input type="text" id="S" placeholder="Площадь обогрева">
-                        </div>
-                        <p class="lablRadio">Терморегулятор</p>
-                        <div class="bottomRadio">
-                            <label><input type="radio" name="termoreg">Программируемый</label>
-                            <label><input type="radio" name="termoreg">Механический</label>
-                        </div>
-                        <p class="lablRadio">Монтажные работы</p>
-                        <div class="bottomRadio">
-                            <label><input type="radio" name="roboty">Выполняются нами</label>
-                            <label><input type="radio" name="roboty">Своими руками</label>
-                        </div>
-                        <button data-text="Заказать расчет стоимости" class="button_orange buttonSize open_popup" type="submit">Заказать расчет стоимости</button>
+                        
+                        <button data-text="Заказать расчет стоимости" class="button_orange buttonSize " type="submit">Заказать расчет стоимости</button>
                     </form>
                 </div>
             </div>
@@ -355,15 +436,21 @@
             <div class="row justify-content-center">
                 <div class="col-xl-9 ">
                     <div class="testimonials-carousel">
-                        <div>Хочу поделиться просто так. Никогда не писал в инет. А тут прям захотелось. Лет 10 назад ставил себе теплые полы Энсто у ребят на Бурсацком спуске. Все работает. Классно. Тут сыну квартиру делаю, дай думаю, опять к ним пойду. И
-                            точно! Все там же, все те же! Андрей и Паша. Очень приятно. Опять поставил их кабель и еще скидку получил. Молодцы! Это ж надо столько лет одним и тем же заниматься! Какой опыт накоплен. Короче, однозначно рекомендую!</div>
-                        <div>Купил кабель Энсто в Эпицентре. Обратился за укладкой. Но мне там отказали и направили в магазин на Бурсацком спуске. Очень прилично. Думал наткнусь на отказ, но нет. Они представители. И проконсультировали и установили. Очень
-                            толково. Супер. Рекомендую без зазрения совести.</div>
-                        <div>Была сложная техническая задача по электро отоплению. Обращался в разные конторы. Везде одно и тоже рекомендуют. Но мне было дороговато. Шел по Бурсацкому - смотрю - Теплые полы. Дай думаю, зайду. А вдруг? И я очень доволен!! Ребята
-                            подсказали решение, которое, и стоит дешевле, и более правильное с инженерной точки зрения. Даже удивлен их грамотностью и порядочностью. Сейчас такое редко встретишь. У всех только бабки скачать. Ценить таких специалистов
-                            надо!!
+                    <div>
+                            Была сложная техническая задача по электро отоплению. Обращался в разные конторы. Везде одно и тоже рекомендуют. Но мне было дороговато. Ребята
+                            подсказали решение, которое, и стоит дешевле, и более правильное с инженерной точки зрения. Даже удивлен их грамотностью и порядочностью. Я очень доволен!!
+                            
                         </div>
-                        <div>Зашла с мужем за теплыми полами на Бурсацкий. Мне очень понравилось. Там еще и розетки красивые есть. Шикарно в общем!</div>
+                        <div>
+                            Лет 10 назад ставил себе теплые полы Энсто. Все работает, классно. Тут сыну квартиру делаю, опять к ним пошёл. 
+                            Опять поставил их кабель и еще скидку получил. Очень приятно. Молодцы! Какой опыт накоплен. Короче, однозначно рекомендую!
+                        </div>
+                        <div>
+                            Купил кабель Энсто в Эпицентре. Обратился за укладкой. Но мне там отказали и направили в магазин на Бурсацком спуске. Очень прилично. Думал наткнусь на отказ, но нет. Они представители. И проконсультировали и установили. Очень
+                            толково. Супер. Рекомендую без зазрения совести.
+                        </div>
+                       
+                        <div>Зашла с мужем за теплыми полами. Мне очень понравилось. Там еще и фурнитура красивая есть. Шикарно в общем!</div>
                     </div>
                 </div>
             </div>
@@ -409,7 +496,7 @@
     <!-- popup -->
 
     <div class="popup">
-        <form action="/" class="lead-form send">
+        <form action="/" class="lead-form send" data-form-name="popup">
             <div class="PopupClosed"></div>
             <p class="popup__titleForm"></p>
             <input class="name" type="text" name="name" placeholder="Ваше имя" >
@@ -433,7 +520,7 @@
     <!-- Scripts -->
 
     <script src="assets/js/libs.min.js"></script>
-    <script src="assets/js/jquery.main.js"></script>
+    <script src="assets/js/main.min.js"></script>
     <script type="text/javascript"></script>
 
 </body>

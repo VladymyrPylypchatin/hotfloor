@@ -40,7 +40,7 @@
         }
     }
     function getFormValues($form){
-        data = {};
+        let data = {};
         data['name'] = $form.find('input[name=name]').val();
         data['email'] = $form.find('input[name=email]').val();;
         data['phone'] = $form.find('input[name=phone]').val();;
@@ -60,20 +60,28 @@
 
         $("input[type=tel]").mask("+38 (000) 000-00-00");
         
-        
+        var formsSenFlag = false;
         $('.lead-form').on('submit', function(event) {
             event.preventDefault(); // отменяем событие по умолчанию
-            
+            let formName = $(this).attr("data-form-name");
+
             var purpose = $(this).attr("data-purpose");
             if(purpose == "price-list"){
             } else{
             }
             
-
-            
             fbq("track", "Lead");
-            dataLayer.push({"event":"send_form"}); 
+            dataLayer.push({"event":"send_form", "formName": formName});
             //$(this).find("input").val("");
+        });
+
+        var formsInteractions = [];
+        $('.lead-form input').on("focus", function(event){
+            let formName = $(this).parents("form").attr("data-form-name");
+            if(!formsInteractions.find(value => value == formName)){
+                dataLayer.push({"event":"fromInteraction", "formName":formName});
+                formsInteractions.push(formName);
+            }
         });
         
         $(".testimonials-carousel").owlCarousel({
@@ -255,7 +263,7 @@
        }
 
        if(FlegName == 1 && Flegphone==1 && Flegmail==1){
-        var jsonData = JSON.stringify(getFormValues($(this)));
+            var jsonData = JSON.stringify(getFormValues($(this)));
             console.log(jsonData);
             SendRequest("POST", "mailer.php", 'data='+jsonData, formSendHandler);
 

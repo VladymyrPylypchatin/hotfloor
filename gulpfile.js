@@ -15,6 +15,7 @@ var gulp = require('gulp'),
     svgSprite = require('gulp-svg-sprite'),
     svgmin = require('gulp-svgmin'),
     plumber = require('gulp-plumber'),
+    babel = require('gulp-babel'),
     run = require('run-sequence');
 
 // Compile sass
@@ -42,11 +43,27 @@ gulp.task("build-css", function () {
 });
 
 //Compress js
-gulp.task('scripts', function () {
-    return gulp.src('source/assets/js/**/*.js')
-        .pipe(uglify())
-       .pipe(gulp.dest('dist/assets/js'))
-        .pipe(browserSync.reload({stream: true}));
+// gulp.task('scripts', function () {
+//     return gulp.src(['source/assets/js/*.js'])
+//         .pipe(uglify())
+//         .pipe(gulp.dest('dist/assets/js'))
+//         .pipe(browserSync.reload({stream: true}));
+// });
+
+gulp.task('concat-scripts', function(){
+    return gulp.src([
+        'source/assets/js/parts/product.js',
+        'source/assets/js/parts/productList.js',
+        'source/assets/js/main.js',
+        'source/assets/js/jquery.main.js', 
+    ])
+    .pipe(babel({
+        presets: ['@babel/env']
+    }))
+    .pipe(concat('main.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/assets/js'))
+    .pipe(browserSync.reload({stream: true}));
 });
 
 //Compress js libs
@@ -165,12 +182,12 @@ gulp.task('watch', ['build', 'browser-sync', ], function () {
     gulp.watch('source/assets/img/**/*.*', ['img']);//test
     gulp.watch('source/*.html', ['html']);
     gulp.watch('source/*.php', ['html']);
-    gulp.watch('source/assets/js/**/*.js', ['scripts']);
+    gulp.watch('source/assets/js/**/*.js', ['concat-scripts']);
     gulp.watch('source/assets/fonts/**/*', ['fonts']);
 });
 
 //Build
-gulp.task('build', ['clean', 'html', 'utils', 'sass', 'css-libs', 'scripts-libs',  'scripts', 'img', 'fonts'], function () {
+gulp.task('build', ['clean', 'html', 'utils', 'sass', 'css-libs', 'scripts-libs',  'concat-scripts', 'img', 'fonts'], function () {
     // var buildCss = gulp.src([
     //     'source/assets/css/main.css',
     //     'source/assets/css/libs.min.css',
