@@ -509,8 +509,27 @@
             
         </div>
         
-
-
+        <div id="callback-popup" class="callback-popup mfp-hide">
+            <div class="content">
+                <div class="content__hidden-img">
+                    <img src="assets/img/consultant.png" alt="">
+                </div>
+                <div class="content__cta">
+                    <div class="image">
+                        <img src="assets/img/consultant.png" alt="">
+                    </div>
+                    <div class="cta-text">
+                        <h4 class="cta-text__header">Увас есть вопросы?</h4>
+                        <p class="cta-text__explanation">Укажите ваш номер телефона и мы перезвоним вам в самое ближайшее время.</p>
+                    </div>
+                </div>
+                <form action="" class="lead-form send2" data-form-name="">
+                    <input type="tel" name="phone" placeholder="Телефон для связи">
+                    <button>Жду звонка!</button>
+                </form>
+            </div>
+        </div>
+        <!-- <a href="#callback-popup" class="open-popup-link">Show inline popup</a> -->
 <!-- popup item -->
     <!-- popup -->
 

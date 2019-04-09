@@ -314,6 +314,8 @@
         console.log(jsonData);
         SendRequest("POST", "mailer.php", 'data='+jsonData, formSendHandler);
 
+        $.magnificPopup.close();
+
         $('.popup_goodbye').css({opacity:'1','pointer-events':'auto'});
         setTimeout(function(){
             $('.popup_goodbye').css({opacity:'0','pointer-events':'none'});
