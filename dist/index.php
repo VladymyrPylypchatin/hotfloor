@@ -32,6 +32,21 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WLJ5PPV');</script>
     <!-- End Google Tag Manager-->
+
+    <!-- Marquiz script start -->
+    <script src="//script.marquiz.ru/v1.js" type="application/javascript"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    Marquiz.init({ 
+        id: '5caf88560defc200441249f9', 
+        autoOpen: false, 
+        autoOpenFreq: 'once', 
+        openOnExit: false 
+    });
+    });
+    </script>
+    <!-- Marquiz script end -->
+
 </head>
 
 <body>
@@ -119,7 +134,7 @@
                         </span> с <span> 20-ти летним</span> опытом!
                     </h1>
                     <ul>
-                        <li>Гарантия 25 лет от производителя</li>
+                        <li>Гарантия до 25 лет от производителя</li>
                         <li>Ремонт и Гарантийное обслуживание</li>
                         <li>Доставка в любую точку Украины</li>
                         <li>Отправка в течении 24 часов</li>
@@ -127,19 +142,44 @@
                     <button class="button_orange sizeButton open_popup" data-text="Получить консультацию от эксперта">Получить консультацию от эксперта</button>
                 </div>
                 <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12 col-12 screen1__RightBar">
-                    <form action="/" class="lead-form send2" data-form-name="specialoffer">
-                        <h2>Бесплатная доставка по всей Украине</h2>
-                        <h3>Закажи больше 3 кв.м теплого пола и получи бесплатную доставку</h3>
-                        <input class="name2" type="text" name="name" placeholder="Ваше имя" >
-                        <input class="phone2" type="tel" name="phone" required placeholder="+(380)__ - ___ - __ - __" >
-                        <input class="mail2" type="email" name="email"required  placeholder="Ваш E-mail" >
-                        <button class="button_orange size " type="submit">Отправить</button>
-                    </form>
+                    
                 </div>
             </div>
         </div>   
     </div>
-
+    <section class="delivery-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 delivery-info__item">
+                    <div class="image-wrapper">
+                        <img src="assets/img/shield.svg" alt="">
+                    </div>
+                    <div class="text-wrapper">
+                        <h3>Оплата при получении</h3>
+                        <p>Вы оплачиваете покупку после того как лично убедитесь в её соответсвии</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 delivery-info__item">
+                    <div class="image-wrapper">
+                        <img src="assets/img/fast-delivery.svg" alt="">
+                    </div>
+                    <div class="text-wrapper">
+                        <h3>Отправка в течении 24ч.</h3>
+                        <p>Ваша покупка будет отправлена не более чем через 24 часа после заявки</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 delivery-info__item">
+                    <div class="image-wrapper">
+                        <img src="assets/img/return-to-the-past.svg" alt="">
+                    </div>
+                    <div class="text-wrapper">
+                        <h3>Возврат до 14 дней</h3>
+                        <p>Вы можете вернуть/обменять товар в течении 14 дней после покупки</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="screen2">
         <div class="container">
             <h3>Только лучшие производители</h3>
@@ -205,7 +245,28 @@
             </div>
         </div>
     </div>
-
+    <div class="screen3">
+    <div class="overlay">
+    </div>
+        <img class="screen3__cat" src="assets/img/flootexture2.jpg" alt="">
+        <div class="container">
+            <h3>Не знаете какой вариант теплого пола Вам нужен?</h3>
+            <p>Оставьте заявку на сайте и наш <span>специалист подберет теплый пол</span> который идеально подходит именно вам.
+            </p>
+            <div class="screen3__line"></div>
+            <form action="/" class="lead-form send2" data-form-name="podbor_pola">
+                <h3>
+                    Заполните форму, чтобы получить Бесплатную консультацию по выбору теплого электрического пола
+                </h3>
+                <div class="screen3__blockInput">
+                    <input class="name2" type="text" name="name" placeholder="Ваше имя" >
+                    <input class="phone2" type="tel" name="phone" required placeholder="+(380)__ - ___ - __ - __">
+                    <input class="mail2" type="email" name="email" required placeholder="Ваш E-mail">
+                    <button class="button_orange size " type="submit">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <div class="screen-advantages">
         <div class="container">
             <h3 class="pochemu">Почему клиенты выбирают нас</h3>
@@ -218,7 +279,7 @@
                     <div class="text">
                         <h4>Консультация от специалиста</h4>
                         <p>
-                            Мы эксперты в электрических теплых полах. Наш опыт в 20 лет поможет вам сделать правильный выбор и сохранить ваше время и деньги.
+                            Каждый наш клиент получает Бесплатную Консультацию от спцеиалиста с опытом в 20 лет. Он поможет вам сделать правильный выбор и сохранить ваше время и деньги.
                         </p>
                     </div>
                 </div>
@@ -227,7 +288,7 @@
                     <div class="text">
                         <h4>Монтажные работы</h4>
                         <p>
-                            Для тех кто проживает в Харькове у нас есть услуга монтажных работ. При заказе от 5000 грн. монтаж бесплатно!.
+                            Для тех кто проживает в Харькове мы предоставляем услугу монтажных работ, что гарантирует качество и долгую работу системы. При заказе от 5000 грн. монтаж бесплатно!.
                         </p>
                     </div>
                 </div>
@@ -236,7 +297,7 @@
                     <div class="text">
                         <h4>Официальный партнер производителя</h4>
                         <p>
-                            Наша компания является официальным партнером производителей теплых полов, что дает Гарантийное обслуживание и Выгодную цену.
+                            Наша компания может предложить выгодные цены и качественное сервисное обслуживания, благодоря тому что мы являемся официальными дистрибьютерами производителя.
                         </p>
                     </div>
                 </div>
@@ -245,16 +306,16 @@
                     <div class="text">
                         <h4>Гарантия до 25 лет от Производителя</h4>
                         <p>
-                            Мы реализуем только оригинальную продукцию поэтому, Производители предоставляют полную гарантию до 25 лет. 
+                            Мы реализуем только оригинальную продукцию, поэтому покупатели получают полную Гарантию от производителя до 25 лет. Производители полностью оплачивает ремонт системы вплоть до востановления напольного покрытия.
                         </p>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 col">
                     <div class="wrap"><img src="assets/img/advantages/truck.svg" alt=""></div>
                     <div class="text">
-                        <h4>Доставка по всей Украине</h4>
+                        <h4>Скоростная Доставка по всей Украине</h4>
                         <p>
-                            Мы отправляем наши товары в любую точку Украины. Ваш заказ отправляется в течении 24 часов.
+                            Ваш заказ будет отправлен в течении 24 часов после заказа. Заказы доставляются в любую точку Украины.
                         </p>
                     </div>
                 </div>
@@ -271,26 +332,7 @@
         </div>
     </div>
 
-    <div class="screen3">
-        <img class="screen3__cat" src="assets/img/kot.webp" alt="">
-        <div class="container">
-            <h3>Скидка 10% на все товары!</h3>
-            <p>Оставьте заявку на сайте и получайте <span>консультацию от специалиста </span> и <span>гарантированную скидку 10%</span> на все товары!
-            </p>
-            <div class="screen3__line"></div>
-            <form action="/" class="lead-form send2" data-form-name="discount">
-                <h3>
-                    Оставьте заявку, чтобы получить подробности акции
-                </h3>
-                <div class="screen3__blockInput">
-                    <input class="name2" type="text" name="name" placeholder="Ваше имя" >
-                    <input class="phone2" type="tel" name="phone" required placeholder="+(380)__ - ___ - __ - __">
-                    <input class="mail2" type="email" name="email" required placeholder="Ваш E-mail">
-                    <button class="button_orange size " type="submit">Отправить</button>
-                </div>
-            </form>
-        </div>
-    </div>
+    
 
     <div class="screen4">
         <div class="container">
@@ -348,37 +390,37 @@
                         <span> избежать переплат и дальнейших проблем.</span> </p>
                 </div>
                 <div class="rightCol">
-                    <form action="/" class="lead-form send2" data-form-name="calculator">
+                    <form id="calculator" action="/" class="" data-form-name="calculator">
                     <p>Калькулятор теплого пола</p>
                         <div class="topIput">
                             <label for="type">Тип помещения</label>
                             <select class="select" required name="type" id="type">
                                 <option value="">Выберите тип помещения</option>
-                                <option value="">Балкон, лоджия</option>
-                                <option value="">Бассейн</option>
-                                <option value="">Ванная комната, санузел</option>
-                                <option value="">Гараж</option>
-                                <option value="">Гостинная</option>
-                                <option value="">Прихожая</option>
-                                <option value="">Кухня</option>
-                                <option value="">Комната</option>
-                                <option value="">Подсобное помещение</option>
+                                <option value="0.9">Балкон, лоджия</option>
+                                <option value="1.2">Бассейн</option>
+                                <option value="1">Ванная комната, санузел</option>
+                                <option value="1.2">Гараж</option>
+                                <option value="1">Гостинная</option>
+                                <option value="1">Прихожая</option>
+                                <option value="1">Кухня</option>
+                                <option value="1">Комната</option>
+                                <option value="0.9">Подсобное помещение</option>
                             </select>
 
                             <label for="heating">Тип обогрева</label>
                             <select class="select" required name="heating" id="heating">
                                 <option value="">Выберите тип обогрева</option>
-                                <option value="">Инфракрасная пленка</option>
-                                <option value="">Стержневой теплый пол</option>
-                                <option value="">Нагревательный кабель</option>
-                                <option value="">Нагревательный мат</option>
+                                <option value="plenka">Инфракрасная пленка</option>
+                                <option value="hotcabel">Нагревательный кабель</option>
+                                <option value="hotmat">Нагревательный мат</option>
+                                <option value="thincabel">Нагревательный тонкий кабель</option>
                             </select>
 
                             <label for="montage">Тип монтажа</label>
                             <select class="select" required name="montage" id="montage">
                                 <option value="">Выберите тип монтажа</option>
-                                <option value="">С нашей помощью</option>
-                                <option value="">Своими руками</option>
+                                <option value="500">С нашей помощью</option>
+                                <option value="0">Своими руками</option>
                             </select>
 
                             <label for="cover">Тип напольного покрытия</label>
@@ -396,20 +438,16 @@
                             <label for="s">Площадь обогрева, м<sup>2</sup></label>
                             <input name="s" type="text" id="s">
 
-                            <label for="Thermostat">Терморегулятор</label>
-                            <select class="select" required name="Thermostat" id="Thermostat">
+                            <label for="thermostat">Терморегулятор</label>
+                            <select class="select" required name="thermostat" id="Thermostat">
                                 <option value="">Выберите терморегулятор</option>
-                                <option value="">Механический</option>
-                                <option value="">Программируемый</option>
-                                <option value="">Не надо</option>
+                                <option value="500">Механический</option>
+                                <option value="1300">Программируемый</option>
+                                <option value="0">Не надо</option>
                             </select>
 
-                            <label for="tel" >Телефон для обратной связи</label>
-                            <input type="tel" required name="phone" id="tel" placeholder="+38( ___ ) ___ - __ - __">
-
-                            <label name="textarea" for="textarea">Комментарий</label>
-                            <textarea  id="textarea"></textarea>
-
+                            <!-- <label for="phone">Номер телефона для получения результата</label>
+                            <input name="phone" required placeholder="+(380)__ - ___ - __ - __" type="tel" id="phone"> -->
                         </div>
                         
                         <button data-text="Заказать расчет стоимости" class="button_orange buttonSize " type="submit">Заказать расчет стоимости</button>
@@ -446,7 +484,30 @@
             </div>
         </div>
     </div>
+    <section class="faq-screen">
+        <div class="container">
+            <h4 class="faq-screen__header">15 Вопросов которые, часто задают нам наши клиенты</h4>
+            <ul class="faq-screen__questions-list">
+                <li>Производиться ли ремонт напольного покрытия при гарантийном обслуживании?</li>
+                <li>Какой плиточный клей нужно использовать при монтаже теплого пола?</li>
+                <li>Можно ли установить теплый пол без терморегулятора?</li>
+                <li>Электрические телпые полы точно безопасны для здоровья?</li>
+                <li>Под какие виды напольного покрытия пригоден теплый электрический пол?</li>
+                <li>Возможен ли обогрев балкона или террасы?</li>
+                <li>Боится ли пол воды?</li>
+                <li>До какой температуры нагревается воздух при использовании теплого пола?</li>
+                <li>Прослужит ли теплый пол 20 лет?</li>
+                <li>Можно ли использовать пол для наружного обогрева</li>
+                <li>Как происходит гарантийное обслуживание</li>
+                <li>Установка теплого пола требует значительного поднятия уровня пола?</li>
+                <li>Можно ли использовать электрические теплые полы для основного обогрева помещения?</li>
+                <li>Для чего нужен терморегулятор?</li>
+                <li>Какой оптимальный шаг укладки нагревательного кабеля?</li>
+            </ul>
 
+            <button class="button_orange faq-screen__button">Скачать pdf-файл с ответами</button>
+        </div>
+    </section>
     <footer class="footer">
         <div class="wrap">
             <div class="container">
@@ -502,34 +563,88 @@
         </div>
     </div>
 
+    <div class="popup-overlay hidden"></div>
+    <div class="popup-wrapper hidden">
+        <div class="popup-multiscreen popup-getfaq popup-wrapper__popup hidden">
+            <div class="close-popup close-btn">x</div>
+            <div class="popup-multiscreen__screen popup-multiscreen__screen_active option-select">
+                <h4>Как вам удобно получить информацию?</h4>
+                <button class="button_orange next" data-controlId="getCall">По телефону</button>
+                <button class="button_orange next" data-controlId="getInMessager">Отправить на почту</button>
+                <a href="https://manychat.com/l1/882714915397364" target="_blank" class="button_orange close-popup" data-controlId="downLoad">Отправить в Месенджер</a>
+            </div>
+            <div class="popup-multiscreen__screen">
+                <h4>Введите контактные данные</h4>
+                <form action="" class="lead-form" data-form-name="getFaq">
+                    <input type="text" placeholder="Ваше имя" name="name" required class="styled-input">
+                    <input type="tel" placeholder="Номер телефона" name="phone" required class="styled-input">
+                    <input type="email" placeholder="Email адрес" name="email" required class="styled-input">
+                    <button class="button_orange">Получить</button>
+                </form>
+            </div>
+            <div class="popup-multiscreen__screen">
+                <h4>Спасибо!</h4>
+                <p class="segment-text">Ваша заявка принята, PDF-брошура была отправленна вам на почту.</p>
+                <p>Наши консультанты перезвонят вам в ближайшее время чтобы ответить на все ваши вопросы и помочь с выбором.</p>
+                <button class="button_orange close-popup">Продолжить просмотр</button>
+            </div>
+        </div>
+        <div class="popup-multiscreen popup-calcResult popup-wrapper__popup hidden">
+            <div class="close-popup close-btn">x</div>
+            <div class="popup-multiscreen__screen popup-multiscreen__screen_active option-select">
+                <h4>Ореинтеровочная стоимость теплого электрического пола</h4>
+                <div class="price">
+                    от <span class="from"></span>
+                    до
+                    <span class="to"></span> грн.
+                </div>
+                <p class="explanation">Расчет выполнен с учетом обобщенных данных. Для получение точных даных нажмите кнопу "Подробнее"</p>
+                <button class="button_orange next" data-controlId="getInMessager">Подробнее</button>
+            </div>
+            <div class="popup-multiscreen__screen">
+                <h4>Подробности расчета</h4>
+                <p>На финальную цену электрического пола влияет множество факторов, от вида монтажа до насколько качественно продуманн проект.</p>
+                <p>Чтобы получить точный расчет стоимости, наберите наших специалистов по номеру +38 (067) 711 8712 или заполните форму для обратной связи.</p>
+                <form action="" class="lead-form" data-form-name="getCaclulation">
+                    <input type="tel" placeholder="Номер телефона" name="phone" required class="styled-input">
+                    <button class="button_orange">Получить</button>
+                </form>
+            </div>
+            <div class="popup-multiscreen__screen">
+                <h4>Спасибо!</h4>
+                <p class="segment-text">Ваша заявка принята</p>
+                <p>Наши консультанты перезвонят вам в ближайшее время чтобы ответить на все ваши вопросы и помочь с выбором.</p>
+                <button class="button_orange close-popup">Продолжить просмотр</button>
+            </div>
+        </div>
+    </div>
+
+
     <div class="cnopa"></div>
     <!-- popup item -->
-            
-        <div class="popupshome">
-            
-        </div>
         
-        <div id="callback-popup" class="callback-popup mfp-hide">
+    <div class="popupshome">
+        
+    </div>
+    
+    <div id="callback-popup" class="callback-popup mfp-hide">
             <div class="content">
                 <div class="content__hidden-img">
                     <img src="assets/img/consultant.png" alt="">
                 </div>
                 <div class="content__cta">
                     <div class="image">
-                        <img src="assets/img/consultant.png" alt="">
+                        <img src="assets/img/consultant.jpg" alt="">
                     </div>
                     <div class="cta-text">
-                        <h4 class="cta-text__header">Увас есть вопросы?</h4>
-                        <p class="cta-text__explanation">Укажите ваш номер телефона и мы перезвоним вам в самое ближайшее время.</p>
+                        <h4 class="cta-text__header">У вас есть вопросы?</h4>
+                        <p class="cta-text__explanation">Пройдите тест и узнайте какой теплый электрический пол вам нужен.</p>
                     </div>
                 </div>
-                <form action="" class="lead-form send2" data-form-name="">
-                    <input type="tel" name="phone" placeholder="Телефон для связи">
-                    <button>Жду звонка!</button>
-                </form>
+                <button class="button_orange" onclick="Marquiz.showModal('5caf88560defc200441249f9')">Пройти тест!</button>
             </div>
-        </div>
-        <!-- <a href="#callback-popup" class="open-popup-link">Show inline popup</a> -->
+    </div>
+    <!-- <a href="#callback-popup" class="open-popup-link">Show inline popup</a> -->
 <!-- popup item -->
     <!-- popup -->
 

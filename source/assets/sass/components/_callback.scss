@@ -27,7 +27,7 @@
                 border-radius: 100px;
                 overflow: hidden;
                 background: white;
-                border: 1px solid #f2f2f2;
+                border: 2px solid white;
 
                 img{
                     height: 100%;
@@ -47,33 +47,10 @@
             }
         }
     }
-    .lead-form{
+    .button_orange{
+        height: 40px;
+        padding: 0 25px;
         margin-top: 30px;
-        input[type="tel"]{
-            border-radius: 5px;
-            background-color: rgb(255, 255, 255);
-            box-shadow: 0px 2px 6.3px 0.7px rgba(0, 0, 0, 0.2);
-            width: 49%;
-            height: 47px;
-            margin-bottom: 10px;
-            border:none;
-            outline:none;
-            margin-right: 15px;
-            padding-left: 15px; 
-        }
-
-        button{
-            border-radius: 5px;
-            background-color: rgb(241, 86, 35);
-            box-shadow: 0px 2px 6.3px 0.7px rgba(0, 0, 0, 0.2);
-            width: 30%;
-            height: 47px;
-            border:none;
-            outline:none;
-            color: white;
-            margin-bottom:0;
-        }
-        
     }
 }
 
@@ -146,6 +123,10 @@
 }
 
 
+.mfp-wrap{
+    position: fixed!important;
+    top: 0 !important;
+}
 
 /* overlay at start */
 .mfp-fade.mfp-bg {

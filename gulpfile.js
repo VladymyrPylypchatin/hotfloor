@@ -56,7 +56,9 @@ gulp.task('concat-scripts', function(){
         'source/assets/js/jquery.main.js', 
         'source/assets/js/parts/product.js',
         'source/assets/js/parts/productPopup.js',
+        'source/assets/js/parts/popup-multiscreen.js',
         'source/assets/js/parts/productList.js',
+        'source/assets/js/parts/calculator.js',
         'source/assets/js/main.js',
     ])
     .pipe(babel({

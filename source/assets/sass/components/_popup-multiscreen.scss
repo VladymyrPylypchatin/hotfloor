@@ -1,0 +1,118 @@
+.popup-multiscreen{
+    background: white;
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    transform: scale(1);
+    transition: transform 300 ms;
+    position: absolute;
+    pointer-events: auto;
+
+    &.hidden{
+        display: none;
+        transform: scale(0);
+        pointer-events: none;
+    }
+
+    &__screen{
+        background: white;
+        padding: 30px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 0;
+
+        &_active{
+            z-index: 5;
+        }
+
+        @include position(flex-start, stretch, column);
+        
+        h4{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .button_orange{
+            height: 40px;
+            width: 100%;
+
+            &:not(:last-child){
+                margin-bottom: 15px;
+            }
+        }
+
+        input{
+            
+            &:not(:last-child){
+                margin-bottom: 15px;
+            }
+        }
+        p{
+            text-align: center;
+        }
+    }
+    .close-btn{
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        cursor: pointer;
+        z-index: 10;
+    }
+    .option-select{
+    }
+}
+
+@include media-breakpoint-down("xs"){
+    .popup-multiscreen{
+        height: 90%;
+        width: 90%;
+        .close-btn{
+            right: 10px;
+            top: 10px;
+        }
+        &__screen{
+            padding: 30px 15px;
+        }
+    }
+}
+
+
+
+
+.popup-wrapper{
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    @include position();
+
+    &.hidden{
+        display: none;
+        
+        
+
+    }
+
+}
+.popup-overlay{
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    opacity: 0.6;
+
+    &.hidden{
+        opacity: 0;
+        display: none;
+    }
+}
+
+
+

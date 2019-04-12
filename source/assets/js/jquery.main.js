@@ -14,10 +14,11 @@
             event.preventDefault(); // отменяем событие по умолчанию
             let formName = $(this).attr("data-form-name");
 
-            var purpose = $(this).attr("data-purpose");
-            if(purpose == "price-list"){
-            } else{
-            }
+
+            var jsonData = JSON.stringify(getFormValues($(this)));
+            console.log(jsonData);
+            SendRequest("POST", "mailer.php", 'data='+jsonData, formSendHandler);
+           
             
             fbq("track", "Lead");
             dataLayer.push({"event":"send_form", "formName": formName});
@@ -217,9 +218,7 @@
        }
 
        if(FlegName == 1 && Flegphone==1 && Flegmail==1){
-            var jsonData = JSON.stringify(getFormValues($(this)));
-            console.log(jsonData);
-            SendRequest("POST", "mailer.php", 'data='+jsonData, formSendHandler);
+           
 
 
             $('.name, .phone, .mail').css({opacity:'0',transition:'1s'});
@@ -310,10 +309,7 @@
 
        if(FlegName == 1 && Flegphone==1 && Flegmail==1){  
 
-        var jsonData = JSON.stringify(getFormValues($(this)));
-        console.log(jsonData);
-        SendRequest("POST", "mailer.php", 'data='+jsonData, formSendHandler);
-
+     
         $.magnificPopup.close();
 
         $('.popup_goodbye').css({opacity:'1','pointer-events':'auto'});
