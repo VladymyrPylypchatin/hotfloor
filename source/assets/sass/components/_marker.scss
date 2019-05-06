@@ -1,0 +1,27 @@
+.marker{
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    box-shadow:  0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+    color: white;
+    text-shadow: 1px 1px 5px rgba(150, 150, 150, 1);
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    @include position(center, center, column);
+    flex-wrap: wrap;
+    text-transform: uppercase;
+
+    &__focus{
+        font-size: 20px;
+    }
+
+    &_great-offer{
+        background: rgba(90, 182, 88, 0.842);
+    }
+
+    &_top-sales{
+
+    }
+}

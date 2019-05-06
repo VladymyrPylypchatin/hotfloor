@@ -105,7 +105,7 @@
     })
 
     $('.stoimost').on('click',function(){
-        var TopScreen2 = $('.screen5').offset().top;
+        var TopScreen2 = $('#freeprice').offset().top;
         $('body,html').animate({scrollTop: TopScreen2}, 700);
     })
 

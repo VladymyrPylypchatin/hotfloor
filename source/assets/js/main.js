@@ -36,7 +36,7 @@ $(document).ready(function() {
         });
 
         dataLayer.push({"event":"popupConsultation"});
-    }, 150000);
+    }, 1000);
 
     let getFaq = new PopupMS(".popup-getfaq");
 

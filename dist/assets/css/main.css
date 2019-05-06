@@ -4806,6 +4806,7 @@ h1, h2, h3, h4, h5, h6 {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  z-index: 10;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   top: 0;
@@ -5145,6 +5146,7 @@ h1, h2, h3, h4, h5, h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -5155,6 +5157,8 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-shadow: 0px 4px 14.4px 1.6px rgba(0, 0, 0, 0.14);
           box-shadow: 0px 4px 14.4px 1.6px rgba(0, 0, 0, 0.14);
   border-radius: 5px; }
+  .item__marker {
+    right: 15px; }
   .item .wrapImg {
     height: 50%;
     overflow: hidden; }
@@ -5346,6 +5350,8 @@ h1, h2, h3, h4, h5, h6 {
           -webkit-transform: rotate(-350grad);
               -ms-transform: rotate(-350grad);
                   transform: rotate(-350grad); }
+    .ItemPopup .ItemPopup__card .green-span {
+      color: #02a002; }
     .ItemPopup .ItemPopup__card .Title {
       font-size: 18px;
       padding-left: 20px;
@@ -5745,6 +5751,39 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     margin-top: 20px;
     margin-bottom: 30px; }
+
+.marker {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+          box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+  color: white;
+  text-shadow: 1px 1px 5px #969696;
+  border-radius: 50%;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-transform: uppercase; }
+  .marker__focus {
+    font-size: 20px; }
+  .marker_great-offer {
+    background: rgba(90, 182, 88, 0.842); }
 
 body {
   font-family: 'Roboto' !important; }
@@ -6816,6 +6855,8 @@ footer {
     display: grid;
     grid-template-columns: 50px auto;
     grid-column-gap: 10px; }
+    .delivery-info__item:not(:last-child) {
+      margin-bottom: 20px; }
     .delivery-info__item .text-wrapper h3 {
       font-size: 19px; }
     .delivery-info__item .text-wrapper p {
@@ -6826,8 +6867,6 @@ footer {
     display: grid;
     grid-template-columns: 70px auto;
     grid-column-gap: 15px; }
-    .delivery-info__item:not(:last-child) {
-      margin-bottom: 20px; }
     .delivery-info__item .text-wrapper h3 {
       font-size: 20px; }
     .delivery-info__item .text-wrapper p {

@@ -1,6 +1,7 @@
 <?php include "hypersegment.php" ?>
 <?php 
-    $hypersegment = new HyperSegment();   
+    $hypersegment = new HyperSegment();  
+    $hypersegment->getGeo(); 
 ?>
 
 <!DOCTYPE html>
@@ -245,24 +246,21 @@
             </div>
         </div>
     </div>
-    <div class="screen3">
-    <div class="overlay">
-    </div>
+    <div class="screen3" id="freeprice">
+        <div class="overlay"></div>
         <img class="screen3__cat" src="assets/img/flootexture2.jpg" alt="">
         <div class="container">
-            <h3>Не знаете какой вариант теплого пола Вам нужен?</h3>
-            <p>Оставьте заявку на сайте и наш <span>специалист подберет теплый пол</span> который идеально подходит именно вам.
+            <h3>Бесплатный расчет Сметы электрического теплого пола</h3>
+            <p>Оставьте заявку на сайте и наш <span>специалист подберет теплый пол</span> который подходит под ваш проект и расчитает его стоимость.
             </p>
             <div class="screen3__line"></div>
             <form action="/" class="lead-form send2" data-form-name="podbor_pola">
-                <h3>
-                    Заполните форму, чтобы получить Бесплатную консультацию по выбору теплого электрического пола
-                </h3>
+               
                 <div class="screen3__blockInput">
                     <input class="name2" type="text" name="name" placeholder="Ваше имя" >
                     <input class="phone2" type="tel" name="phone" required placeholder="+(380)__ - ___ - __ - __">
                     <input class="mail2" type="email" name="email" required placeholder="Ваш E-mail">
-                    <button class="button_orange size " type="submit">Отправить</button>
+                    <button class="button_orange size " type="submit">Получить Расчет</button>
                 </div>
             </form>
         </div>
@@ -508,6 +506,8 @@
             <button class="button_orange faq-screen__button">Скачать pdf-файл с ответами</button>
         </div>
     </section>
+
+    
     <footer class="footer">
         <div class="wrap">
             <div class="container">
@@ -559,7 +559,7 @@
 
     <div class="popup_goodbye">
         <div class="bye">
-            <p>Спасибо, мы Вам позвоним в ближайшее время. </p>
+            <p>Спасибо, мы Вам позвоним в ближайшее время.</p>
         </div>
     </div>
 
@@ -637,11 +637,11 @@
                         <img src="assets/img/consultant.jpg" alt="">
                     </div>
                     <div class="cta-text">
-                        <h4 class="cta-text__header">У вас есть вопросы?</h4>
-                        <p class="cta-text__explanation">Пройдите тест и узнайте какой теплый электрический пол вам нужен.</p>
+                        <h4 class="cta-text__header">У вас есть вопросы? Получи Бесплатный расчет Сметы!</h4>
+                        <p class="cta-text__explanation">Квалифицированные специалисты нашего магазина помогут подобрать покрытие для ваших нужд, исходя из особенностей вашего помещения и суммы, которую вы готовы потратить. Вы получите ответы на любые вопросы относительно будущей системы и ее характеристик.</p>
                     </div>
                 </div>
-                <button class="button_orange" onclick="Marquiz.showModal('5caf88560defc200441249f9')">Пройти тест!</button>
+                <button class="button_orange" onclick="Marquiz.showModal('5caf88560defc200441249f9')">Получить смету</button>
             </div>
     </div>
     <!-- <a href="#callback-popup" class="open-popup-link">Show inline popup</a> -->

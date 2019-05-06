@@ -43,7 +43,7 @@ let types = {
         description: "Тонкий нагревательный кабель под плитку монтируются на чистовую стяжку, сверху плиточный клей и укладывается плитка. Используются если нет возможности или желания поднимать высоту пола.",   
         categoryTittle: "Тонкий нгревательный кабель под плитку",
         powerUnit: "Вт/м", 
-        priceUnit: "грн/м<sup>2</sup>"
+        priceUnit: "грн/м"
     },
     plenka: {
         id: 4, 
@@ -77,6 +77,9 @@ class Product{
         this.card.addClass("col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 itemWrap");
         this.card.append(`
             <div class="item">
+                <div class="item__marker marker marker_great-offer">
+                    Выгодная <span class="marker__focus">цена</span>
+                </div>
                 <div class="wrapImg">
                     <img src="assets/img/products/${this.id}.webp" alt="">
                 </div>

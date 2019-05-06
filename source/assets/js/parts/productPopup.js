@@ -26,8 +26,8 @@ class ProductPopup{
                     <div class="price">
                         <div class="Brand">
                             <p>Бренд: <span>${this.product.brand.name}</span></p>
-                            <p>Модель: <span>Rx 424</span></p>
                             <p>Вид: <span>${this.product.type.name}</span></p>
+                            <p>Наличие на складе: <span class="green-span">в наличии</span></p>
                         </div>
                         <p class="Prise2">от ${this.product.price} </span>${this.product.type.priceUnit}</p>
                         <p class="Clisc1">Заказать в 1 клик</p>
